@@ -27,9 +27,9 @@ PICの初期化。PICなどの説明は下のリストに大体まとめた。IC
 IDTに登録する際セグメント番号も必要になるので、0x280000から0x07ffバイトを使用するセグメント番号2、つまりbootpack.hrbが展開されるセグメントを指定する。
 
 ---------
-*LGDT…Load Global (segment) Descriptor Table命令。ロードだがレジスタ(GDTR)から読み込む命令ではなく、レジスタ(GDTR)に読み込ませる命令。
-*LIDT…Load Interrupt Descriptor Table命令。
-*PIC…Programable Interrupt Controller。設定可能な割り込みコントローラ。CPUは単独では1つしか割り込みを扱えない設計になっているが、それを補うための補助チップのこと。PICは8つの割り込み信号を一つの割り込みにまとめることができる。このPIC(マスタ)にもうひとつPIC(スレーブ)を繋げることで、計15個の割り込み信号が扱えるようになる。
-*IRQ…Interrupt REquest。割り込み要求。
-*ICW…Initial Control Word。初期化制御データ。PIC上の設定用レジスタ。ICW1〜4まであり、すべて8bit。1と4については詳しく説明されていない。ICW3はマスタスレーブ用の設定で、マスタ側のICW3は8bitで、スレーブが接続されているビットを1に設定する。今回はIRQの2番なので00000100。一方スレーブ側のICW3では繋がっているIRQの番号を3bitで指定する。今回は2番なので2進数で表して010。ICW2はIRQをどの割り込み番号としてCPUに通知するかを設定するためのレジスタ。INTの最小値(0x20-27で受けるときは0x20)を指定する？
-*IMR…Interrupt Mask Register。ICWと同じくPIC上の設定用レジスタ。8bitあり、各ビットがIRQ信号に対応しており、1が立っていればそのIRQ信号は無視される。
+* LGDT…Load Global (segment) Descriptor Table命令。ロードだがレジスタ(GDTR)から読み込む命令ではなく、レジスタ(GDTR)に読み込ませる命令。
+* LIDT…Load Interrupt Descriptor Table命令。
+* PIC…Programable Interrupt Controller。設定可能な割り込みコントローラ。CPUは単独では1つしか割り込みを扱えない設計になっているが、それを補うための補助チップのこと。PICは8つの割り込み信号を一つの割り込みにまとめることができる。このPIC(マスタ)にもうひとつPIC(スレーブ)を繋げることで、計15個の割り込み信号が扱えるようになる。
+* IRQ…Interrupt REquest。割り込み要求。
+* ICW…Initial Control Word。初期化制御データ。PIC上の設定用レジスタ。ICW1〜4まであり、すべて8bit。1と4については詳しく説明されていない。ICW3はマスタスレーブ用の設定で、マスタ側のICW3は8bitで、スレーブが接続されているビットを1に設定する。今回はIRQの2番なので00000100。一方スレーブ側のICW3では繋がっているIRQの番号を3bitで指定する。今回は2番なので2進数で表して010。ICW2はIRQをどの割り込み番号としてCPUに通知するかを設定するためのレジスタ。INTの最小値(0x20-27で受けるときは0x20)を指定する？
+* IMR…Interrupt Mask Register。ICWと同じくPIC上の設定用レジスタ。8bitあり、各ビットがIRQ信号に対応しており、1が立っていればそのIRQ信号は無視される。

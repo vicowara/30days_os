@@ -40,6 +40,6 @@ rgb[0]/4は右シフト？io_out8の8が8bitの意であることは間違いな
 
 ------
 
-*INSTRSET…CPUの命令セットを指定する？指定しない場合は8086(16bit向けの命令セット)になる。今回は486を指定する。
-*CLI(CLear Interrupt flag)…割り込みフラグを0にする。割り込みが無視される？
-*STI(SeT Interrupt flag)…割り込みフラグを1にする。割り込みに対応する？
+* INSTRSET…CPUの命令セットを指定する？指定しない場合は8086(16bit向けの命令セット)になる。今回は486を指定する。
+* CLI(CLear Interrupt flag)…割り込みフラグを0にする。割り込みが無視される？
+* STI(SeT Interrupt flag)…割り込みフラグを1にする。割り込みに対応する？

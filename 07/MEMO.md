@@ -25,4 +25,4 @@ harib04aでは割り込みハンドラでキーコードの取得から表示ま
 マウスはIRQ12を用いるがこれはキーボードとは異なりスレーブに割り込みがくる。スレーブに割り込みが来る場合、スレーブだけでなくマスタにもIRQの受付完了を通知する必要がある。マウスはキーボードと同じ処理でデータを受け取ることが出来るため、特に大きな追加はない。
 
 ----
-*OCW…Operation Command Word。1と2があり、OCW1はIMRに格納する値を設定し、OCW2はPICの操作を行う。[PIC 8259Aのページ](http://oswiki.osask.jp/?%28PIC%298259A)や[０から作るOS開発　割り込みその２　PICとIRQ](http://softwaretechnique.jp/OS_Development/kernel_development03.html)が詳しい。
+* OCW…Operation Command Word。1と2があり、OCW1はIMRに格納する値を設定し、OCW2はPICの操作を行う。[PIC 8259Aのページ](http://oswiki.osask.jp/?%28PIC%298259A)や[０から作るOS開発　割り込みその２　PICとIRQ](http://softwaretechnique.jp/OS_Development/kernel_development03.html)が詳しい。

@@ -31,9 +31,9 @@ sprintfで変数も表示できるという内容。
 
 
 ------
-*セグメンテーション…メモリの衝突を防ぐために、メモリを切り分けてその頭を仮想的に0として扱うといった機能。32bitではDS(セグメントレジスタ)にセグメントセレクタが入っており、アドレス計算時はその開始アドレスに相対的なアドレスが足される。
-*セグメントセレクタ…文中ではセグメント番号と表記。
-*GDT…Global (segment) Descriptor Table。メモリ上に配置されたセグメントの設定テーブル。
-*GDTR…Global (segment) Descriptor Table Register。GDTのあるメモリのアドレスと有効な設定個数を格納するレジスタ。
-*IDT…Interrupt Descriptor Table。割り込み用の設定テーブル。
-*IDTR…Interrupt Descriptor Table Register。IDTのあるメモリのアドレスと有効な設定個数を格納するレジスタ。
+* セグメンテーション…メモリの衝突を防ぐために、メモリを切り分けてその頭を仮想的に0として扱うといった機能。32bitではDS(セグメントレジスタ)にセグメントセレクタが入っており、アドレス計算時はその開始アドレスに相対的なアドレスが足される。
+* セグメントセレクタ…文中ではセグメント番号と表記。
+* GDT…Global (segment) Descriptor Table。メモリ上に配置されたセグメントの設定テーブル。
+* GDTR…Global (segment) Descriptor Table Register。GDTのあるメモリのアドレスと有効な設定個数を格納するレジスタ。
+* IDT…Interrupt Descriptor Table。割り込み用の設定テーブル。
+* IDTR…Interrupt Descriptor Table Register。IDTのあるメモリのアドレスと有効な設定個数を格納するレジスタ。
